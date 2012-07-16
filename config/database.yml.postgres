@@ -21,7 +21,7 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
+  adapter: postgresql
   encoding: unicode
   database: rails_projects
   pool: 5
