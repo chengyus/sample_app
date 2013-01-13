@@ -1,1 +1,4 @@
 include ApplicationHelper
+
+include UserUtil
+
