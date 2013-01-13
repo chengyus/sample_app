@@ -7,6 +7,14 @@ describe "AuthenticationPages" do
   describe "signin" do
     before { visit signin_path }
 
+    describe "has label for email" do
+      it { should have_selector('label', text: 'Email:') }
+    end
+
+    describe "has label for password" do
+      it { should have_selector('label', text: 'Password:') }
+    end
+
     describe "with invalid information" do
       before { click_button "Sign in" }
 
