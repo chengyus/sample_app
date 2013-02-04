@@ -28,6 +28,12 @@ describe "Authentication" do
 
     end
 
+    describe "no Profile and Settings when not signed in" do
+      let(:user) { FactoryGirl.create(:user) }
+      it { should_not have_link('Profile', href: user_path(user)) }
+      it { should_not have_link('Settings', href: edit_user_path(user)) }
+    end
+
     describe "with valid information" do
       let(:user) { FactoryGirl.create(:user) }
       before { sign_in user }
