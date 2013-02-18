@@ -16,11 +16,13 @@
       <%= yield %>
       <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>
+
       <%= debug("request is local? " + request.local?.to_s ) if Rails.env.development? %>
       <%= debug("request is GET? " + request.get?.to_s ) if Rails.env.development? %>
       <%= debug("request is POST? " + request.post?.to_s ) if Rails.env.development? %>
       <%= debug("request is PUT? " + request.put?.to_s ) if Rails.env.development? %>
       <%= debug("request is DELETE? " + request.delete?.to_s ) if Rails.env.development? %>
+
     </div>
   </body>
 </html>
